@@ -6,8 +6,9 @@ import axios from "axios";
 const userState = new Map();
 
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const URL_WEBSITE = process.env.URL_WEBSITE;
 const API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}`;
-const WEB_URL = `https://368d-181-204-33-106.ngrok-free.app/mascota/`; // ej: https://miveterinaria.com/mascota/
+const WEB_URL = URL_WEBSITE; // ej: https://miveterinaria.com/mascota/
 
 export async function POST(req) {
   const body = await req.json();
